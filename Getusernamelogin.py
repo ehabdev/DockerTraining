@@ -1,6 +1,4 @@
-# importing os module
-import os
-
-# using getlogin() returning username
-userlogin=os.getlogin()
-print (userlogin)
+import getpass
+getpass.getuser()
+username=getpass.getuser()
+print(username)
