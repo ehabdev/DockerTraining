@@ -1,7 +1,7 @@
 pipeline {
     environment {
     registry = "ehabdevopscourse/mydockerhub"  
-    registryCredential = Docker_ID
+    registryCredential = "Docker_ID"
     dockerImage = ''
   }
         stage('build and push image') {
