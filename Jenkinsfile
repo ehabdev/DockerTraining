@@ -4,6 +4,8 @@ pipeline {
     registryCredential = "Docker_ID"
     dockerImage = ''
   }
+    agent any
+    stages {
         stage('build and push image') {
             steps {
                script {
@@ -14,6 +16,7 @@ pipeline {
                }
             }
         }
+    }
          post {
          always {
              bat "docker rmi $registry:$BUILD_NUMBER"
